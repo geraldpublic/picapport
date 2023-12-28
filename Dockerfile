@@ -1,5 +1,7 @@
 ARG IMAGE=alpine:latest
 
+LABEL version="2023-12-28"
+
 # first image to download qemu and make it executable
 FROM alpine AS qemu
 ARG QEMU=x86_64
