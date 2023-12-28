@@ -1,7 +1,5 @@
 ARG IMAGE=alpine:latest
 
-LABEL version="2023-12-28"
-
 # first image to download qemu and make it executable
 FROM alpine AS qemu
 ARG QEMU=x86_64
@@ -27,6 +25,8 @@ ENV PICAPPORT_PORT=80
 ENV DTRACE=WARNING
 ENV XMS=256m
 ENV XMX=1024m
+
+LABEL version="2023-12-28"
 
 RUN apk add --update --no-cache tini openjdk8-jre && \
     mkdir -p /opt/picapport/.picapport && \
