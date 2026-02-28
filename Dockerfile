@@ -26,7 +26,7 @@ ENV DTRACE=WARNING
 ENV XMS=256m
 ENV XMX=1024m
 
-LABEL version="2026-01-31"
+LABEL version="2026-02-28"
 
 RUN apk add --update --no-cache tini openjdk8-jre && \
     mkdir -p /opt/picapport/.picapport && \
